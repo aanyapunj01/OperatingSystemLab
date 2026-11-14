@@ -14,6 +14,7 @@ C programs for my Operating Systems lab. Run them on Linux, WSL or a Linux virtu
 | 5 | Implementation of pipe | `pipe.c` | Two related processes exchange data through a pipe |
 | 6 | Implementation of FIFO (named pipe) | `fifo_writer.c` | Writes data into the FIFO |
 | 6 | Implementation of FIFO (named pipe) | `fifo_reader.c` | Reads data from the FIFO |
+| 7 | Implementation of message queue | `message_sender.c` | Sends messages to the message queue |
 | 7 | Implementation of message queue | `message_receiver.c` | Receives messages from the message queue |
 | 8 | Implementation of shared memory | `shared_writer.c` | Writes data into shared memory |
 | 8 | Implementation of shared memory | `shared_reader.c` | Reads data from shared memory |
