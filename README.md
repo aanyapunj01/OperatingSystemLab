@@ -1,64 +1,36 @@
 # Operating Systems Lab
 
-C programs for my Operating Systems lab, covering process management, inter-process communication (IPC), CPU scheduling and page replacement.
+C programs for my Operating Systems lab. Run them on Linux, WSL or a Linux virtual machine.
 
-## Programs
+## List of Experiments
 
-### Process Management
-| Program | Description |
-|---|---|
-| `q2_parent_child.c` | Demonstrates the `fork()` system call |
-| `odd_even_sum_fork.c` | Parent sums odd numbers and child sums even numbers using `fork()` |
-| `q3_wait.c` | Demonstrates the `wait()` system call |
-| `orphan_process_demo.c` | Demonstrates an orphan process |
-| `zombie_process_demo.c` | Demonstrates a zombie process |
-
-### Inter-Process Communication
-| Program | Description |
-|---|---|
-| `pipe.c` | Communication between processes using a pipe |
-| `fifo_writer.c` | Writes data to a FIFO (named pipe) |
-| `fifo_reader.c` | Reads data from a FIFO (named pipe) |
-| `message_receiver.c` | Receives messages from a message queue |
-| `shared_writer.c` | Writes data to shared memory |
-| `shared_reader.c` | Reads data from shared memory |
-
-### CPU Scheduling
-| Program | Description |
-|---|---|
-| `fcfs.c` | First Come First Served (FCFS) |
-| `sjf.c` | Shortest Job First (SJF) |
-| `priority.c` | Priority scheduling |
-
-### Page Replacement
-| Program | Description |
-|---|---|
-| `fifo_page.c` | FIFO page replacement algorithm |
-| `lru_page.c` | Least Recently Used (LRU) page replacement algorithm |
+| S.No. | Experiment | File | Description |
+|---|---|---|---|
+| 1 | Implementation of `fork()` system call | `q2_parent_child.c` | Creates a child process and shows the parent and child running separately |
+| 2 | Sum of odd and even numbers using `fork()` | `odd_even_sum_fork.c` | Parent adds the odd numbers and the child adds the even numbers |
+| 3 | Implementation of `wait()` system call | `q3_wait.c` | Parent waits for the child to finish before continuing |
+| 4 | Implementation of orphan process | `orphan_process_demo.c` | Parent exits first, so the child keeps running as an orphan |
+| 4 | Implementation of zombie process | `zombie_process_demo.c` | Child exits but the parent does not collect its status |
+| 5 | Implementation of pipe | `pipe.c` | Two related processes exchange data through a pipe |
+| 6 | Implementation of FIFO (named pipe) | `fifo_writer.c` | Writes data into the FIFO |
+| 6 | Implementation of FIFO (named pipe) | `fifo_reader.c` | Reads data from the FIFO |
+| 7 | Implementation of message queue | `message_receiver.c` | Receives messages from the message queue |
+| 8 | Implementation of shared memory | `shared_writer.c` | Writes data into shared memory |
+| 8 | Implementation of shared memory | `shared_reader.c` | Reads data from shared memory |
+| 9 | Implementation of FCFS CPU scheduling | `fcfs.c` | Runs processes in the order they arrive |
+| 10 | Implementation of SJF CPU scheduling | `sjf.c` | Runs the process with the shortest burst time first |
+| 11 | Implementation of priority scheduling | `priority.c` | Runs processes in order of their priority |
+| 12 | Implementation of FIFO page replacement | `fifo_page.c` | Replaces the oldest page in memory |
+| 13 | Implementation of LRU page replacement | `lru_page.c` | Replaces the page that was used least recently |
 
 ## How to Compile and Run
-
-These programs use Linux system calls, so run them on Linux, WSL or a Linux virtual machine.
 
 ```bash
 gcc filename.c -o output
 ./output
 ```
 
-Example:
-```bash
-gcc fcfs.c -o fcfs
-./fcfs
-```
-
-The IPC programs come in pairs (writer/reader, sender/receiver). Run the writer in one terminal and the reader in another.
-
-## Topics Covered
-- Process creation and synchronization (`fork`, `wait`)
-- Orphan and zombie processes
-- Pipes, FIFOs, message queues and shared memory
-- CPU scheduling algorithms
-- Page replacement algorithms
+For programs that come in pairs (writer/reader, sender/receiver), run each in a separate terminal.
 
 ## Author
 Aanya
